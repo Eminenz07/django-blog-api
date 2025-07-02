@@ -93,11 +93,14 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Replace your existing DATABASES setting with this:
 DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",  # or "django.db.backends.sqlite3", "django.db.backends.mysql", etc.
+        "NAME": "your_database_name",
+        "USER": "your_database_user",
+        "PASSWORD": "your_database_password",
+        "HOST": "your_database_host",
+        "PORT": "your_database_port",
+    }
 }
 
 
