@@ -22,17 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5bc-^qgf@vi-$nw+54onz^of_pt0&x!+)6-_l544a^5s%jd4*a'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Set DEBUG to False in production
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 # Configure ALLOWED_HOSTS for Render
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
+if RENDER_EXTERNAL_HOSTNAME and RENDER_EXTERNAL_HOSTNAME not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
 
 
 # Application definition
@@ -91,16 +92,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# Replace your existing DATABASES setting with this:
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",  # or "django.db.backends.sqlite3", "django.db.backends.mysql", etc.
-        "NAME": "your_database_name",
-        "USER": "your_database_user",
-        "PASSWORD": "your_database_password",
-        "HOST": "your_database_host",
-        "PORT": "your_database_port",
-    }
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
 

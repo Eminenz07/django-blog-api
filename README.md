@@ -87,6 +87,6 @@ The SubThread project is developed and maintained by [Eminence Adebayo](https://
 
 - Twitter: [@Emidveloper](https://x.com/Emidveloper)
 - All projects available at [Eminenz07 GitHub](https://github.com/Eminenz07)
-- LinkedIn: [![rohanphulkar](https://res.cloudinary.com/rohanphulkar/image/upload/v1684619255/social-icons/linked-in-alt_dsqxqx.svg)](https://linkedin.com/in/rohanphulkar)
+- LinkedIn: [![Eminence](https://res.cloudinary.com/rohanphulkar/image/upload/v1684619255/social-icons/linked-in-alt_dsqxqx.svg)](https://www.linkedin.com/in/eminence-adebayo-83531a2b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
-- Instagram: [![codes.rohan](https://res.cloudinary.com/rohanphulkar/image/upload/v1684619255/social-icons/instagram_slovbx.svg)](https://instagram.com/codes.rohan)
+- Instagram: [![Emidveloper](https://res.cloudinary.com/rohanphulkar/image/upload/v1684619255/social-icons/instagram_slovbx.svg)](https://www.instagram.com/d_3v3lop3r?igsh=YjhtZ2x2dGM4anRy)
